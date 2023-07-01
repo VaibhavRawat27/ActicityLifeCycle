@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //btnNext?.findViewById<Button>(R.id.btnNext)
+        
         btnNext = findViewById(R.id.btnNext)
 
     btnNext?.setOnClickListener {

@@ -5,20 +5,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     var btnNext: Button?=null
+    var etSomething : Text?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        
+
         btnNext = findViewById(R.id.btnNext)
+        etSomething = findViewById(R.id.etSomething)
 
     btnNext?.setOnClickListener {
         var intent = Intent(this, NextPage::class.java)
+        intent.putExtra("name", etSomething?.toString())
         startActivity(intent)
-        //finish() //use finish() for destroy, but if you use finish() here then you cant use restart method
+        //finish() //use finish() for destroy, but if you don't use finish() here then you cant use restart method
 
     }
     }

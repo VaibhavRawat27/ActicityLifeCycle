@@ -11,12 +11,16 @@ class NextPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_next_page)
-        btnRestart = findViewById(R.id.btnRestart)
+        intent?.let {
+            var namee = it.getStringExtra("name")
+            System.out.println(namee)
+        }
+        /* btnRestart = findViewById(R.id.btnRestart)
         btnRestart?.setOnClickListener {
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }
+        } */
     }
 
     override fun onRestart() {

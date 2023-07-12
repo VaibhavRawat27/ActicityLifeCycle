@@ -1,6 +1,5 @@
 package com.vaibhavrawat.acticitylifecycle
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -12,8 +11,8 @@ class NextPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_next_page)
         intent?.let {
-            var namee = it.getStringExtra("name")
-            System.out.println(namee)
+
+            //println(namee)
         }
         /* btnRestart = findViewById(R.id.btnRestart)
         btnRestart?.setOnClickListener {
